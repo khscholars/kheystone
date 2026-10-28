@@ -172,9 +172,9 @@ footer .wrap{padding-block:18px 28px}
     </section>
 
     <section class="rise" style="animation-delay:.42s">
-      <h2>Project submissions by year</h2>
-      <div class="cols" id="growth" role="img" aria-label="Project submissions: 2020-21, 13; 2021-22, 18; 2022-23, 21; 2023-24, 31; 2024-25, 35; 2025-26, 63; 2026-27, 73"></div>
-      <p class="note">Ideas submitted each autumn, before review. This year's 73 submissions became 71 projects.</p>
+      <h2>KHeystone Projects by year</h2>
+      <div class="cols" id="growth" role="img" aria-label="KHeystone Projects by year: 2020-21, 13; 2021-22, 18; 2022-23, 21; 2023-24, 31 (projects presented at the end-of-year showcase); 2024-25, 35; 2025-26, 63; 2026-27, 73 (ideas submitted)"></div>
+      <p class="note">Lighter bars (2020-21 to 2023-24) show projects that presented at the end-of-year showcase, since showcase participation is the most complete record we have for those years. From 2024-25 on, bars show ideas submitted each autumn. This year's 73 submissions became 71 projects.</p>
     </section>
 
     <section class="rise" style="animation-delay:.5s">
@@ -223,10 +223,10 @@ footer .wrap{padding-block:18px 28px}
   document.getElementById('catbars').innerHTML=CATS.map(([n,c,nw,ct],i)=>`<div class="brow" role="img" aria-label="${n}: ${nw+ct} projects, ${nw} new and ${ct} continuing"><span class="name">${n}</span><span class="track"><span class="grow-x" style="width:${nw/max*100}%;background:var(${c});animation-delay:${.35+i*.07}s"></span><span class="grow-x" style="width:${ct/max*100}%;background:var(${c});opacity:.4;animation-delay:${.5+i*.07}s"></span></span><span class="v">${nw+ct}</span></div>`).join('');
 
   function columns(id,data,color,top){
-    document.getElementById(id).innerHTML=data.map(([lab,v,hi],i)=>`<div class="col"><span class="val">${v}</span><span class="bar grow-y" style="height:calc(${v/top} * (100% - 44px));background:${hi?'var(--cardinal)':color};animation-delay:${.4+i*.08}s"></span><span class="yr">${lab}</span></div>`).join('');
+    document.getElementById(id).innerHTML=data.map(([lab,v,hi,lite],i)=>`<div class="col"><span class="val">${v}</span><span class="bar grow-y" style="height:calc(${v/top} * (100% - 44px));background:${hi?'var(--cardinal)':color};${lite?'opacity:.4;':''}animation-delay:${.4+i*.08}s"></span><span class="yr">${lab}</span></div>`).join('');
   }
   columns('cohorts',[['2020',1],['2021',3],['2022',3],['2023',4],['2024',23],['2025',31],['2026',19]],'var(--plum)',31);
-  columns('growth',[["20-21",13],["21-22",18],["22-23",21],["23-24",31],["24-25",35],["25-26",63],["26-27",73,1]],'var(--stone)',73);
+  columns('growth',[["20-21",13,0,1],["21-22",18,0,1],["22-23",21,0,1],["23-24",31,0,1],["24-25",35],["25-26",63],["26-27",73,1]],'var(--stone)',73);
 
   // count-ups: numbers are already correct in the markup; this only replays them on load
   const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
