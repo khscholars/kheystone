@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="2026-27 KHeystone Projects by the numbers, Knight-Hennessy Scholars, Stanford University.">
+<title>KHeystone by the Numbers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}footer a{color:var(--cardinal);font-weight:600}
+.top-line a,.mark a{color:inherit;text-decoration:none}
+.mark a{display:inline}
+.top-line a:hover span:last-child,.mark a:hover span:last-child{text-decoration:underline}
+.kh-logo-link{display:inline-block}
+.kh-logo{display:block;height:auto;width:240px;max-width:70vw}
+.hero p.yr7{font-size:17px;margin-top:8px;color:var(--cool-gray)}
+.hero p.yr7 b{color:var(--black)}
+</style>
+<style>
+/* Layout: one white page in KHS brand. Wordmark header with Stanford geometric "hill" shapes, a hero stat, then a two-column grid of stat blocks and to-scale bar charts. Single light theme: brand allows black text only on white. */
+:root{
+  --white:#FFFFFF; --black:#2E2D29; --cardinal:#8C1515; --cool-gray:#53565A;
+  --line:rgba(83,86,90,.2); --wash:rgba(83,86,90,.07);
+  --lagunita:#007C92; --spirited:#E04F39; --poppy:#E98300; --palo-verde:#279989; --plum:#620059; --stone:#7F7776; --olive:#8F993E;
+  --sans:"Source Sans 3", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--white);color:var(--black);font-family:var(--sans);font-size:17px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+header .wrap{position:relative;z-index:1;padding-block:40px 32px}
+header{display:flex;flex-direction:column}
+header .wrap{width:100%;padding-bottom:20px!important}
+.hills{position:relative;order:2;width:100%;height:clamp(72px,9vw,110px);display:block;pointer-events:none}
+.mark{font-weight:400;font-size:clamp(22px,2.8vw,30px);line-height:1.15;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:.3em;color:var(--black)}
+.mark .su{color:var(--cardinal);font-weight:600}
+h1 .kp{white-space:nowrap}
+h1 .sofar{font-weight:400;font-style:italic;font-size:.6em;color:var(--cool-gray)}
+h1{font-size:min(3.6vw,64px);font-weight:700;line-height:1.05;margin:18px 0 10px;letter-spacing:-.01em;white-space:nowrap}
+.asof{margin:0;color:var(--cool-gray);font-size:min(15px,3.1vw);font-style:italic;white-space:nowrap}
+main .wrap{padding-block:36px 56px;display:grid;gap:36px}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:12px 36px;align-items:end}
+.big{font-size:clamp(64px,9vw,104px);font-weight:800;line-height:.85;color:var(--cardinal);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.hero p{margin:0;font-size:clamp(20px,2.4vw,26px);line-height:1.3;max-width:none}
+.hero .up{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:17px;font-weight:600;color:var(--palo-verde)}
+.split{grid-column:1 / -1;margin-top:8px}
+.splitbar{display:flex;height:22px;border-radius:4px;overflow:hidden;background:var(--wash)}
+.splitbar span{display:block;height:100%;transform-origin:left;}
+.splitkey{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:16px}
+.splitkey b{font-size:22px;font-variant-numeric:tabular-nums}
+.cont{margin-top:26px}
+.cont h2{margin:0 0 12px}
+.hero .cont .note{font-size:14px;line-height:1.4;margin-top:10px}
+.yrs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.yr2{border-top:5px solid var(--c);background:var(--wash);border-radius:0 0 6px 6px;padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px}
+.yr2 b{font-size:40px;font-weight:800;line-height:1;color:var(--c);font-variant-numeric:tabular-nums}
+.yr2 .lbl{font-weight:600;font-size:17px}
+.yr2 .sm{font-size:14px;color:var(--cool-gray);line-height:1.3}
+@media (max-width:760px){.yrs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
+section{min-width:0}
+h2{font-size:22px;font-weight:700;margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--cardinal);text-wrap:balance;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.pill{display:inline-block;font-size:13px;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;border:1.5px solid var(--cool-gray);color:var(--cool-gray);white-space:nowrap}
+.scope{font-size:15px;color:var(--cool-gray);margin:-6px 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+.tile .n{font-size:clamp(44px,6vw,60px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:var(--c,var(--black))}
+.tile .l{font-size:16px;margin-top:4px}
+.tile .s{font-size:14px;color:var(--cool-gray);margin-top:2px}
+.ring{display:flex;align-items:center;gap:14px}
+.ring svg{flex:none}
+.bars{display:grid;gap:9px}
+.brow{display:grid;grid-template-columns:minmax(0,190px) 1fr 38px;gap:10px;align-items:center;font-size:15px}
+.brow .name{min-width:0;line-height:1.2}
+.track{height:16px;background:var(--wash);border-radius:3px;overflow:hidden;display:flex}
+.track span{height:100%;transform-origin:left}
+.brow .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--cool-gray);margin-top:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.cols{display:flex;align-items:flex-end;gap:10px;height:180px;padding-top:22px}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px}
+.col .bar{width:100%;max-width:56px;border-radius:3px 3px 0 0;transform-origin:bottom;position:relative}
+.col .val{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
+.col .yr{font-size:13px;color:var(--cool-gray);white-space:nowrap}
+.note{font-size:14px;color:var(--cool-gray);margin:10px 0 0}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.facts li{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center}
+.facts b{font-size:32px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:var(--c);text-align:right}
+.facts span{line-height:1.35}
+footer{border-top:1px solid var(--line);color:var(--cool-gray);font-size:14px}
+footer .wrap{padding-block:18px 28px}
+@media (max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .brow{grid-template-columns:minmax(0,130px) 1fr 32px;font-size:14px}
+  .cols{gap:6px}
+  .col .yr{font-size:11px}
+}
+/* motion: everything rests at its final state; animation only plays on load */
+@media (prefers-reduced-motion:no-preference){
+  .go .grow-x{animation:growx 1s cubic-bezier(.2,.7,.2,1) both}
+  .go .grow-y{animation:growy 1s cubic-bezier(.2,.7,.2,1) both}
+  .go .rise{animation:rise .7s ease-out both}
+  .go .hill{animation:hill 1.4s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes growy{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes rise{from{transform:translateY(14px);opacity:.15}to{transform:none;opacity:1}}
+  @keyframes hill{from{transform:translateY(60%)}to{transform:none}}
+}
+.back{margin:0 0 14px;font-size:15px}.back a{color:var(--cardinal);text-underline-offset:3px}.back a::before{content:"\2190  "}
+</style>
+</head>
+<body>
+<header>
+  <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <!-- Stanford geometric paint shapes: mountain, hill, flow, wave -->
+    <path class="hill" style="animation-delay:.05s" d="M60 120 C120 120 150 40 220 40 C290 40 300 92 340 96 C380 100 400 28 460 28 C520 28 540 120 600 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.15s" d="M420 120 C480 120 520 46 600 46 C680 46 720 120 780 120 Z" fill="#E98300" fill-opacity=".85"/>
+    <path class="hill" style="animation-delay:.25s" d="M900 120 C960 120 990 30 1060 22 C1130 14 1160 60 1200 64 L1200 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.35s" d="M560 120 C700 98 820 78 940 88 C1050 97 1130 76 1200 66 L1200 120 Z" fill="#E04F39" fill-opacity=".9"/>
+  </svg>
+  <div class="wrap">
+    <p class="back"><a href="index.html">KHeystone Project Directory</a></p>
+    <p class="mark"><a href="https://kh.stanford.edu" target="_blank" rel="noopener"><span class="su">Stanford</span> <span>Knight-Hennessy Scholars</span></a></p>
+    <h1>2026-27 <span class="kp" id="kp">KHeystone Projects</span> by the numbers <span class="sofar">(so far)</span></h1>
+    <p class="asof">As of October 28, 2026, the day before the Ideas Festival</p>
+  </div>
+</header>
+
+<main><div class="wrap">
+
+  <div class="hero rise">
+    <div class="big" data-count="71">71</div>
+    <div>
+      <p>KHeystone Projects this year, led by scholars from 5 cohorts</p>
+      <div class="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l6 7H10v5H6V9H2z" fill="currentColor"/></svg>29% more than last year's 55</div>
+      <p class="yr7">The <b>7th year</b> of KHeystone Projects, which began in 2021</p>
+    </div>
+    <div class="split">
+      <div class="splitbar" role="img" aria-label="42 new projects; 29 continuing: 21 in their 2nd year, 6 in their 3rd, 1 in its 5th, and 1 in its 6th">
+        <span class="grow-x" style="width:calc(42/71*100%);background:var(--cardinal)"></span>
+        <span class="grow-x" style="width:calc(21/71*100%);background:var(--palo-verde);animation-delay:.2s"></span>
+        <span class="grow-x" style="width:calc(6/71*100%);background:var(--lagunita);animation-delay:.3s"></span>
+        <span class="grow-x" style="width:calc(1/71*100%);min-width:6px;background:var(--plum);animation-delay:.4s"></span>
+        <span class="grow-x" style="width:calc(1/71*100%);min-width:6px;background:var(--poppy);animation-delay:.5s"></span>
+      </div>
+      <div class="splitkey"><span><b data-count="42">42</b> new this year</span><span style="text-align:right"><b data-count="29">29</b> continuing from past years</span></div>
+      <div class="cont">
+        <h2>Continuing projects, by year</h2>
+        <div class="yrs">
+          <div class="yr2" style="--c:var(--palo-verde)"><b data-count="21">21</b><span class="lbl">in their 2nd year</span><span class="sm">started in 2025</span></div>
+          <div class="yr2" style="--c:var(--lagunita)"><b data-count="6">6</b><span class="lbl">in their 3rd year</span><span class="sm">started in 2024</span></div>
+          <div class="yr2" style="--c:var(--plum)"><b data-count="1">1</b><span class="lbl">in its 5th year</span><span class="sm">Stanford Housing Equity Project, started in 2022</span></div>
+          <div class="yr2" style="--c:var(--poppy)"><b data-count="1">1</b><span class="lbl">in its 6th year</span><span class="sm">Through Their Eyes: Pediatric Photography Project, started in 2021</span></div>
+        </div>
+        <p class="note">8 projects have been running for 3 years or more. Years are counted from the year each project was established, with 2026-27 as the current year.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <section class="rise" style="animation-delay:.1s">
+      <h2>Ideas Festival, October 29 <span class="pill">Not final</span></h2>
+      <p class="scope">Projects can still opt out of tabling or pitching, so these counts may change. Final numbers will be confirmed after the festival.</p>
+      <div class="tiles">
+        <div class="tile ring">
+          <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="rgba(83,86,90,.12)" stroke-width="10"/><circle class="arc" cx="32" cy="32" r="26" fill="none" stroke="#E04F39" stroke-width="10" stroke-linecap="butt" transform="rotate(-90 32 32)" pathLength="100" stroke-dasharray="85 100"/></svg>
+          <div><div class="n" style="--c:var(--spirited)" data-count="60">60</div><div class="l">project tables</div><div class="s">85% of projects</div></div>
+        </div>
+        <div class="tile ring">
+          <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="rgba(83,86,90,.12)" stroke-width="10"/><circle class="arc" cx="32" cy="32" r="26" fill="none" stroke="#007C92" stroke-width="10" transform="rotate(-90 32 32)" pathLength="100" stroke-dasharray="79 100"/></svg>
+          <div><div class="n" style="--c:var(--lagunita)" data-count="56">56</div><div class="l">30-second pitches</div><div class="s">79% of projects</div></div>
+        </div>
+      </div>
+      <p class="note">Two rooms at Denning House: 41 tables in the Dining Room and 19 in the Classroom.</p>
+    </section>
+
+    <section class="rise" style="animation-delay:.18s">
+      <h2>The scholars behind them</h2>
+      <p class="scope">Counts project managers and founders only. Team members who join after the Ideas Festival aren't included yet.</p>
+      <div class="tiles">
+        <div class="tile"><div class="n" style="--c:var(--cardinal)" data-count="84">84</div><div class="l">scholars involved</div><div class="s">founders and project managers</div></div>
+        <div class="tile"><div class="n" style="--c:var(--plum)" data-count="7">7</div><div class="l">cohorts represented</div><div class="s">2020 through 2026</div></div>
+        <div class="tile"><div class="n" data-count="71">71</div><div class="l">project managers</div><div class="s">one project each</div></div>
+        <div class="tile"><div class="n" data-count="80">80</div><div class="l">founders</div><div class="s">67 also manage their project</div></div>
+      </div>
+    </section>
+
+    <section class="rise" style="animation-delay:.26s">
+      <h2>Projects by category</h2>
+      <p class="scope">Many projects span more than one area. Scholars chose the single category that best represents their project.</p>
+      <div class="bars" id="catbars"></div>
+      <div class="legend"><span><i style="background:var(--black)"></i>New</span><span><i style="background:var(--black);opacity:.35"></i>Continuing</span></div>
+    </section>
+
+    <section class="rise" style="animation-delay:.34s">
+      <h2>Founders and project managers by cohort</h2>
+      <div class="cols" id="cohorts" role="img" aria-label="Founders and project managers by cohort: 2020, 1; 2021, 3; 2022, 3; 2023, 4; 2024, 23; 2025, 31; 2026, 19"></div>
+      <p class="note">Each founder and project manager counted once. The 2020 and 2021 cohorts appear as founders of continuing projects.</p>
+    </section>
+
+    <section class="rise" style="animation-delay:.42s">
+      <h2>KHeystone Projects by year</h2>
+      <p class="scope">KHeystone Projects began in 2021, so 2026-27 is the program's 7th year.</p>
+      <div class="cols" id="growth" role="img" aria-label="KHeystone Projects by year: 2020-21, 13; 2021-22, 18; 2022-23, 21; 2023-24, 31 (projects presented at the end-of-year showcase); 2024-25, 35; 2025-26, 63; 2026-27, 73 (ideas submitted)"></div>
+      <p class="note">Lighter bars (2020-21 to 2023-24) show projects that presented at the end-of-year showcase, since showcase participation is the most complete record we have for those years. From 2024-25 on, bars show ideas submitted each autumn. This year's 73 submissions became 71 projects.</p>
+    </section>
+
+    <section class="rise" style="animation-delay:.5s">
+      <h2>What scholars are working on</h2>
+      <ul class="facts">
+        <li><b style="--c:var(--poppy)" data-count="25">25</b><span>projects involve education, from early childhood to graduate mentorship</span></li>
+        <li><b style="--c:var(--spirited)" data-count="22">22</b><span>projects focus on health, including maternal health, surgery, and public health</span></li>
+        <li><b style="--c:var(--lagunita)" data-count="15">15</b><span>projects work with AI, from biosafety to civic trust</span></li>
+        <li><b style="--c:var(--palo-verde)" data-count="12">12</b><span>projects have a global focus, from Haiti to Ukraine to Ethiopia</span></li>
+        <li><b style="--c:var(--cardinal)" data-count="17">17</b><span>scholars from the newest cohort, 2026, are already leading new projects</span></li>
+      </ul>
+    </section>
+
+  </div>
+</div></main>
+
+<footer><div class="wrap"><a class="kh-logo-link" href="https://kh.stanford.edu" target="_blank" rel="noopener"><img class="kh-logo" src="kh-logo.png" alt="Knight-Hennessy Scholars, Stanford University" width="840" height="176"></a><p style="margin:14px 0 0">Figures from the KHeystone Project records in Slate as of October 27, 2026. Ideas Festival table and pitch counts are not final. Topic counts are based on project titles, descriptions, and keywords.</p></div></footer>
+
+<script>
+(function(){
+  // keep the title on one line: scale its font to the width available (max 64px)
+  const h1=document.querySelector('h1');
+  function fit(){
+    h1.style.fontSize='100px';
+    const cs=getComputedStyle(h1.parentElement);
+    const w=h1.parentElement.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight), s=h1.scrollWidth;
+    h1.style.fontSize=Math.min(64, Math.floor(100*w/s*0.98*10)/10)+'px';
+  }
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  window.addEventListener('resize',fit);
+  window.addEventListener('load',fit);
+  // wordmark letters in rotating accent colors
+  const kp=document.getElementById('kp'), cols=['--lagunita','--spirited','--poppy','--palo-verde'];
+  let k=0; kp.innerHTML=[...kp.textContent].map(ch=>ch===' '?' ':`<span style="color:var(${cols[k++%4]})">${ch}</span>`).join('');
+  fit();
+
+  const CATS=[
+    ['NGO, Social Impact, and Advocacy','--lagunita',9,10],
+    ['Healthcare and Life Sciences','--spirited',9,4],
+    ['Science, Technology, and Engineering','--palo-verde',6,5],
+    ['Education and Academia','--poppy',3,6],
+    ['Government, Law, and Public Policy','--plum',7,2],
+    ['Art, Media, and Communications','--stone',6,2],
+    ['Sustainability','--olive',2,0]];
+  const max=19;
+  document.getElementById('catbars').innerHTML=CATS.map(([n,c,nw,ct],i)=>`<div class="brow" role="img" aria-label="${n}: ${nw+ct} projects, ${nw} new and ${ct} continuing"><span class="name">${n}</span><span class="track"><span class="grow-x" style="width:${nw/max*100}%;background:var(${c});animation-delay:${.35+i*.07}s"></span><span class="grow-x" style="width:${ct/max*100}%;background:var(${c});opacity:.4;animation-delay:${.5+i*.07}s"></span></span><span class="v">${nw+ct}</span></div>`).join('');
+
+  function columns(id,data,color,top){
+    document.getElementById(id).innerHTML=data.map(([lab,v,hi,lite],i)=>`<div class="col"><span class="val">${v}</span><span class="bar grow-y" style="height:calc(${v/top} * (100% - 44px));background:${hi?'var(--cardinal)':color};${lite?'opacity:.4;':''}animation-delay:${.4+i*.08}s"></span><span class="yr">${lab}</span></div>`).join('');
+  }
+  columns('cohorts',[['2020',1],['2021',3],['2022',3],['2023',4],['2024',23],['2025',31],['2026',19]],'var(--plum)',31);
+  columns('growth',[["20-21",13,0,1],["21-22",18,0,1],["22-23",21,0,1],["23-24",31,0,1],["24-25",35],["25-26",63],["26-27",73,1]],'var(--stone)',73);
+
+  // count-ups: numbers are already correct in the markup; this only replays them on load
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('go');
+  if(!reduce){
+    document.querySelectorAll('[data-count]').forEach(el=>{
+      const end=+el.dataset.count, t0=performance.now(), dur=1100;
+      const step=t=>{const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3); el.textContent=Math.round(end*e); if(p<1) requestAnimationFrame(step);};
+      requestAnimationFrame(step);
+    });
+    document.querySelectorAll('.arc').forEach(a=>{
+      const target=a.getAttribute('stroke-dasharray'); a.setAttribute('stroke-dasharray','0 100');
+      a.style.transition='stroke-dasharray 1.1s cubic-bezier(.2,.7,.2,1) .3s';
+      requestAnimationFrame(()=>requestAnimationFrame(()=>a.setAttribute('stroke-dasharray',target)));
+    });
+  }
+})();
+</script>
+</body>
+</html>
