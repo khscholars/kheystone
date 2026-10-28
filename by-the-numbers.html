@@ -15,8 +15,9 @@
 .top-line a:hover span:last-child,.mark a:hover span:last-child{text-decoration:underline}
 .kh-logo-link{display:inline-block}
 .kh-logo{display:block;height:auto;width:240px;max-width:70vw}
-.hero p.yr7{font-size:17px;margin-top:8px;color:var(--cool-gray)}
-.hero p.yr7 b{color:var(--black)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.y7{display:inline-block;background:rgba(39,153,137,.12);color:#1B6E62;font-weight:600;font-size:14px;line-height:1;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.y7 span{font-weight:400}
 </style>
 <style>
 /* Layout: one white page in KHS brand. Wordmark header with Stanford geometric "hill" shapes, a hero stat, then a two-column grid of stat blocks and to-scale bar charts. Single light theme: brand allows black text only on white. */
@@ -116,16 +117,16 @@ footer .wrap{padding-block:18px 28px}
 <header>
   <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
     <!-- Stanford geometric paint shapes: mountain, hill, flow, wave -->
-    <path class="hill" style="animation-delay:.05s" d="M60 120 C120 120 150 40 220 40 C290 40 300 92 340 96 C380 100 400 28 460 28 C520 28 540 120 600 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.05s" d="M60 120 C120 120 150 40 220 40 C290 40 300 92 340 96 C380 100 400 28 460 28 C520 28 540 120 600 120 Z" fill="#007C92" fill-opacity=".75"/>
     <path class="hill" style="animation-delay:.15s" d="M420 120 C480 120 520 46 600 46 C680 46 720 120 780 120 Z" fill="#E98300" fill-opacity=".85"/>
-    <path class="hill" style="animation-delay:.25s" d="M900 120 C960 120 990 30 1060 22 C1130 14 1160 60 1200 64 L1200 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.25s" d="M900 120 C960 120 990 30 1060 22 C1130 14 1160 60 1200 64 L1200 120 Z" fill="#007C92" fill-opacity=".75"/>
     <path class="hill" style="animation-delay:.35s" d="M560 120 C700 98 820 78 940 88 C1050 97 1130 76 1200 66 L1200 120 Z" fill="#E04F39" fill-opacity=".9"/>
   </svg>
   <div class="wrap">
     <p class="back"><a href="index.html">KHeystone Project Directory</a></p>
     <p class="mark"><a href="https://kh.stanford.edu" target="_blank" rel="noopener"><span class="su">Stanford</span> <span>Knight-Hennessy Scholars</span></a></p>
     <h1>2026-27 <span class="kp" id="kp">KHeystone Projects</span> by the numbers <span class="sofar">(so far)</span></h1>
-    <p class="asof">As of October 28, 2026, the day before the Ideas Festival</p>
+    <div class="meta"><span class="y7">Year 7 <span>· since 2021</span></span><p class="asof">As of October 28, 2026, the day before the Ideas Festival</p></div>
   </div>
 </header>
 
@@ -136,7 +137,6 @@ footer .wrap{padding-block:18px 28px}
     <div>
       <p>KHeystone Projects this year, led by scholars from 5 cohorts</p>
       <div class="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l6 7H10v5H6V9H2z" fill="currentColor"/></svg>29% more than last year's 55</div>
-      <p class="yr7">The <b>7th year</b> of KHeystone Projects, which began in 2021</p>
     </div>
     <div class="split">
       <div class="splitbar" role="img" aria-label="42 new projects; 29 continuing: 21 in their 2nd year, 6 in their 3rd, 1 in its 5th, and 1 in its 6th">
