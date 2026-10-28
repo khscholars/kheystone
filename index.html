@@ -165,7 +165,7 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
   const firstLetter = p => { const c=sortKey(p.t).charAt(0).toUpperCase(); return /[A-Z]/.test(c)?c:'#'; };
   const view = document.getElementById('view');
   let query = '';
-  const INTRO = `<p class="intro">KHeystone Projects are year-long, scholar-led collaborations aimed at addressing important regional or global issues. Each autumn quarter, any interested scholar can present an idea for a KHeystone Project at the annual Ideas Festival; scholars then form multidisciplinary project teams — sometimes aligned to their field of study, sometimes completely different.</p>`;
+  const INTRO = `<p class="intro"><a href="https://kh.stanford.edu/program-overview/leadership-development/kheystone-projects" target="_blank" rel="noopener">KHeystone Projects</a> are year-long, scholar-led collaborations aimed at addressing important regional or global issues. Each autumn quarter, any interested scholar can present an idea for a KHeystone Project at the annual Ideas Festival; scholars then form multidisciplinary project teams — sometimes aligned to their field of study, sometimes completely different.</p>`;
 
   function matches(p){
     if(!query) return true;
