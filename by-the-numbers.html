@@ -43,6 +43,15 @@ main .wrap{padding-block:36px 56px;display:grid;gap:36px}
 .splitbar span{display:block;height:100%;transform-origin:left;}
 .splitkey{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:16px}
 .splitkey b{font-size:22px;font-variant-numeric:tabular-nums}
+.cont{margin-top:26px}
+.cont h2{margin:0 0 12px}
+.hero .cont .note{font-size:14px;line-height:1.4;margin-top:10px}
+.yrs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.yr2{border-top:5px solid var(--c);background:var(--wash);border-radius:0 0 6px 6px;padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px}
+.yr2 b{font-size:40px;font-weight:800;line-height:1;color:var(--c);font-variant-numeric:tabular-nums}
+.yr2 .lbl{font-weight:600;font-size:17px}
+.yr2 .sm{font-size:14px;color:var(--cool-gray);line-height:1.3}
+@media (max-width:760px){.yrs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
 section{min-width:0}
 h2{font-size:22px;font-weight:700;margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--cardinal);text-wrap:balance;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
@@ -121,11 +130,24 @@ footer .wrap{padding-block:18px 28px}
       <div class="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l6 7H10v5H6V9H2z" fill="currentColor"/></svg>29% more than last year's 55</div>
     </div>
     <div class="split">
-      <div class="splitbar" role="img" aria-label="42 new projects and 29 continuing projects">
+      <div class="splitbar" role="img" aria-label="42 new projects; 29 continuing: 21 in their 2nd year, 6 in their 3rd, 1 in its 5th, and 1 in its 6th">
         <span class="grow-x" style="width:calc(42/71*100%);background:var(--cardinal)"></span>
-        <span class="grow-x" style="width:calc(29/71*100%);background:var(--stone);animation-delay:.25s"></span>
+        <span class="grow-x" style="width:calc(21/71*100%);background:var(--palo-verde);animation-delay:.2s"></span>
+        <span class="grow-x" style="width:calc(6/71*100%);background:var(--lagunita);animation-delay:.3s"></span>
+        <span class="grow-x" style="width:calc(1/71*100%);min-width:6px;background:var(--plum);animation-delay:.4s"></span>
+        <span class="grow-x" style="width:calc(1/71*100%);min-width:6px;background:var(--poppy);animation-delay:.5s"></span>
       </div>
-      <div class="splitkey"><span><b data-count="42">42</b> new this year</span><span style="text-align:right"><b data-count="29">29</b> continuing, some since 2021</span></div>
+      <div class="splitkey"><span><b data-count="42">42</b> new this year</span><span style="text-align:right"><b data-count="29">29</b> continuing from past years</span></div>
+      <div class="cont">
+        <h2>Continuing projects, by year</h2>
+        <div class="yrs">
+          <div class="yr2" style="--c:var(--palo-verde)"><b data-count="21">21</b><span class="lbl">in their 2nd year</span><span class="sm">started in 2025</span></div>
+          <div class="yr2" style="--c:var(--lagunita)"><b data-count="6">6</b><span class="lbl">in their 3rd year</span><span class="sm">started in 2024</span></div>
+          <div class="yr2" style="--c:var(--plum)"><b data-count="1">1</b><span class="lbl">in its 5th year</span><span class="sm">Stanford Housing Equity Project, started in 2022</span></div>
+          <div class="yr2" style="--c:var(--poppy)"><b data-count="1">1</b><span class="lbl">in its 6th year</span><span class="sm">Through Their Eyes: Pediatric Photography Project, started in 2021</span></div>
+        </div>
+        <p class="note">8 projects have been running for 3 years or more. Years are counted from the year each project was established, with 2026-27 as the current year.</p>
+      </div>
     </div>
   </div>
 
