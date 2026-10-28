@@ -26,26 +26,26 @@ a:focus-visible,button:focus-visible,label:focus-within{outline:3px solid var(--
 .wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 header.top{background:var(--white);border-bottom:1px solid var(--line)}
 header.top .wrap{padding-block:36px 0}
-.mark{font-family:var(--sans);font-weight:400;font-size:clamp(26px,3.6vw,38px);line-height:1.15;margin:0;letter-spacing:-.005em}
-.mark a{color:var(--black);text-decoration:none;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:.35em}
-.mark .bar{color:var(--cool-gray);font-weight:300}
-.mark .kp{font-weight:600;white-space:nowrap}
-.sub{margin:6px 0 20px;font-size:18px;color:var(--cool-gray)}
+.top-line{font-weight:400;font-size:clamp(20px,2.6vw,28px);line-height:1.15;margin:0;color:var(--black)}
+.top-line .su{color:var(--cardinal);font-weight:600}
+.ttl{font-family:var(--sans);font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1.05;margin:10px 0 6px;letter-spacing:-.01em}
+.ttl a{text-decoration:none}
+.hills{display:block;width:100%;height:clamp(56px,7vw,92px);margin-top:4px;pointer-events:none}
+header.top .tabwrap{padding-block:0}
+@media (prefers-reduced-motion:no-preference){.hill{animation:hillrise 1.4s cubic-bezier(.2,.7,.2,1) both}@keyframes hillrise{from{transform:translateY(60%)}to{transform:none}}}
+.sub{margin:0 0 8px;font-size:18px;color:var(--cool-gray)}
 nav.tabs{display:flex;gap:24px;flex-wrap:wrap}
 nav.tabs a{color:var(--black);text-decoration:none;padding:10px 0 12px;font-weight:600;font-size:17px;border-bottom:3px solid transparent;margin-bottom:-1px}
 nav.tabs a:hover{color:var(--cardinal)}
 nav.tabs a[aria-current="page"]{color:var(--cardinal);border-bottom-color:var(--cardinal)}
 @media (max-width:560px){
   header.top .wrap{padding-block:24px 0}
-  .mark a{flex-direction:column;align-items:flex-start;row-gap:2px}
-  .mark .org{font-size:.72em}
-  .mark .bar{display:none}
-  .sub{font-size:16px;margin-bottom:12px}
+  .sub{font-size:16px;margin-bottom:6px}
   nav.tabs{gap:0;justify-content:space-between}
   nav.tabs a{flex:1 1 auto;text-align:center;font-size:14.5px;padding:12px 2px;white-space:nowrap}
 }
 main .wrap{padding-block:28px 64px}
-.intro{font-size:19px;line-height:1.5;max-width:none;margin:0 0 28px;color:var(--black)}
+.intro{font-family:var(--serif);font-size:20px;line-height:1.55;max-width:none;margin:0 0 28px;color:#000}
 @media (max-width:560px){.intro{font-size:17px}}
 .toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:24px}
 .search{flex:1 1 260px;min-width:0;display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--cool-gray);border-radius:6px;padding:0 12px;color:var(--cool-gray)}
@@ -122,8 +122,17 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
 <body>
 <div id="root">
 <header class="top"><div class="wrap">
-  <h1 class="mark"><a href="#" aria-label="Knight-Hennessy Scholars, KHeystone Projects"><span class="org">Knight-Hennessy Scholars</span><span class="bar" aria-hidden="true">|</span><span class="kp" aria-hidden="true"><span style="color:var(--lagunita)">K</span><span style="color:var(--spirited)">H</span><span style="color:var(--poppy)">e</span><span style="color:var(--palo-verde)">y</span><span style="color:var(--lagunita)">s</span><span style="color:var(--spirited)">t</span><span style="color:var(--poppy)">o</span><span style="color:var(--palo-verde)">n</span><span style="color:var(--lagunita)">e</span> <span style="color:var(--spirited)">P</span><span style="color:var(--poppy)">r</span><span style="color:var(--palo-verde)">o</span><span style="color:var(--lagunita)">j</span><span style="color:var(--spirited)">e</span><span style="color:var(--poppy)">c</span><span style="color:var(--palo-verde)">t</span><span style="color:var(--lagunita)">s</span></span></a></h1>
+  <p class="top-line"><span class="su">Stanford</span> Knight-Hennessy Scholars</p>
+  <h1 class="ttl"><a href="#" aria-label="KHeystone Projects"><span style="color:var(--lagunita)">K</span><span style="color:var(--spirited)">H</span><span style="color:var(--poppy)">e</span><span style="color:var(--palo-verde)">y</span><span style="color:var(--lagunita)">s</span><span style="color:var(--spirited)">t</span><span style="color:var(--poppy)">o</span><span style="color:var(--palo-verde)">n</span><span style="color:var(--lagunita)">e</span> <span style="color:var(--spirited)">P</span><span style="color:var(--poppy)">r</span><span style="color:var(--palo-verde)">o</span><span style="color:var(--lagunita)">j</span><span style="color:var(--spirited)">e</span><span style="color:var(--poppy)">c</span><span style="color:var(--palo-verde)">t</span><span style="color:var(--lagunita)">s</span></a></h1>
   <p class="sub">2026-2027 project directory</p>
+</div>
+  <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path class="hill" style="animation-delay:.05s" d="M60 120 C120 120 150 40 220 40 C290 40 300 92 340 96 C380 100 400 28 460 28 C520 28 540 120 600 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.15s" d="M420 120 C480 120 520 46 600 46 C680 46 720 120 780 120 Z" fill="#E98300" fill-opacity=".85"/>
+    <path class="hill" style="animation-delay:.25s" d="M900 120 C960 120 990 30 1060 22 C1130 14 1160 60 1200 64 L1200 120 Z" fill="#279989" fill-opacity=".7"/>
+    <path class="hill" style="animation-delay:.35s" d="M560 120 C700 98 820 78 940 88 C1050 97 1130 76 1200 66 L1200 120 Z" fill="#E04F39" fill-opacity=".9"/>
+  </svg>
+<div class="wrap tabwrap">
   <nav class="tabs" aria-label="Contents">
     <a href="#" data-tab="categories">By category</a>
     <a href="#a-z" data-tab="az">A to Z</a>
