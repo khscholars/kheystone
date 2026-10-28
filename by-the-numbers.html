@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="2026-27 KHeystone Projects by the numbers, Knight-Hennessy Scholars, Stanford University.">
 <title>KHeystone by the Numbers</title>
@@ -30,7 +32,7 @@ header .wrap{width:100%;padding-bottom:20px!important}
 h1 .kp{white-space:nowrap}
 h1 .sofar{font-weight:400;font-style:italic;font-size:.6em;color:var(--cool-gray)}
 h1{font-size:min(3.6vw,64px);font-weight:700;line-height:1.05;margin:18px 0 10px;letter-spacing:-.01em;white-space:nowrap}
-.asof{margin:0;color:var(--cool-gray);font-size:17px}
+.asof{margin:0;color:var(--cool-gray);font-size:min(15px,3.1vw);font-style:italic;white-space:nowrap}
 main .wrap{padding-block:36px 56px;display:grid;gap:36px}
 .hero{display:grid;grid-template-columns:auto 1fr;gap:12px 36px;align-items:end}
 .big{font-size:clamp(64px,9vw,104px);font-weight:800;line-height:.85;color:var(--cardinal);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
@@ -197,11 +199,13 @@ footer .wrap{padding-block:18px 28px}
   const h1=document.querySelector('h1');
   function fit(){
     h1.style.fontSize='100px';
-    const w=h1.parentElement.clientWidth, s=h1.scrollWidth;
-    h1.style.fontSize=Math.min(64, Math.floor(100*w/s*10)/10)+'px';
+    const cs=getComputedStyle(h1.parentElement);
+    const w=h1.parentElement.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight), s=h1.scrollWidth;
+    h1.style.fontSize=Math.min(64, Math.floor(100*w/s*0.98*10)/10)+'px';
   }
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
   window.addEventListener('resize',fit);
+  window.addEventListener('load',fit);
   // wordmark letters in rotating accent colors
   const kp=document.getElementById('kp'), cols=['--lagunita','--spirited','--poppy','--palo-verde'];
   let k=0; kp.innerHTML=[...kp.textContent].map(ch=>ch===' '?' ':`<span style="color:var(${cols[k++%4]})">${ch}</span>`).join('');
