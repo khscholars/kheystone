@@ -9,7 +9,15 @@
 <title>KHeystone by the Numbers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
-<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}footer a{color:var(--cardinal);font-weight:600}
+.top-line a,.mark a{color:inherit;text-decoration:none}
+.mark a{display:inline}
+.top-line a:hover span:last-child,.mark a:hover span:last-child{text-decoration:underline}
+.kh-logo-link{display:inline-block}
+.kh-logo{display:block;height:auto;width:240px;max-width:70vw}
+.hero p.yr7{font-size:17px;margin-top:8px;color:var(--cool-gray)}
+.hero p.yr7 b{color:var(--black)}
+</style>
 <style>
 /* Layout: one white page in KHS brand. Wordmark header with Stanford geometric "hill" shapes, a hero stat, then a two-column grid of stat blocks and to-scale bar charts. Single light theme: brand allows black text only on white. */
 :root{
@@ -115,7 +123,7 @@ footer .wrap{padding-block:18px 28px}
   </svg>
   <div class="wrap">
     <p class="back"><a href="index.html">KHeystone Project Directory</a></p>
-    <p class="mark"><span class="su">Stanford</span><span>Knight-Hennessy Scholars</span></p>
+    <p class="mark"><a href="https://kh.stanford.edu" target="_blank" rel="noopener"><span class="su">Stanford</span> <span>Knight-Hennessy Scholars</span></a></p>
     <h1>2026-27 <span class="kp" id="kp">KHeystone Projects</span> by the numbers <span class="sofar">(so far)</span></h1>
     <p class="asof">As of October 28, 2026, the day before the Ideas Festival</p>
   </div>
@@ -128,6 +136,7 @@ footer .wrap{padding-block:18px 28px}
     <div>
       <p>KHeystone Projects this year, led by scholars from 5 cohorts</p>
       <div class="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l6 7H10v5H6V9H2z" fill="currentColor"/></svg>29% more than last year's 55</div>
+      <p class="yr7">The <b>7th year</b> of KHeystone Projects, which began in 2021</p>
     </div>
     <div class="split">
       <div class="splitbar" role="img" aria-label="42 new projects; 29 continuing: 21 in their 2nd year, 6 in their 3rd, 1 in its 5th, and 1 in its 6th">
@@ -195,6 +204,7 @@ footer .wrap{padding-block:18px 28px}
 
     <section class="rise" style="animation-delay:.42s">
       <h2>KHeystone Projects by year</h2>
+      <p class="scope">KHeystone Projects began in 2021, so 2026-27 is the program's 7th year.</p>
       <div class="cols" id="growth" role="img" aria-label="KHeystone Projects by year: 2020-21, 13; 2021-22, 18; 2022-23, 21; 2023-24, 31 (projects presented at the end-of-year showcase); 2024-25, 35; 2025-26, 63; 2026-27, 73 (ideas submitted)"></div>
       <p class="note">Lighter bars (2020-21 to 2023-24) show projects that presented at the end-of-year showcase, since showcase participation is the most complete record we have for those years. From 2024-25 on, bars show ideas submitted each autumn. This year's 73 submissions became 71 projects.</p>
     </section>
@@ -213,7 +223,7 @@ footer .wrap{padding-block:18px 28px}
   </div>
 </div></main>
 
-<footer><div class="wrap">Knight-Hennessy Scholars, Stanford University. Figures from the KHeystone Project records in Slate as of October 27, 2026. Ideas Festival table and pitch counts are not final. Topic counts are based on project titles, descriptions, and keywords.</div></footer>
+<footer><div class="wrap"><a class="kh-logo-link" href="https://kh.stanford.edu" target="_blank" rel="noopener"><img class="kh-logo" src="kh-logo.png" alt="Knight-Hennessy Scholars, Stanford University" width="840" height="176"></a><p style="margin:14px 0 0">Figures from the KHeystone Project records in Slate as of October 27, 2026. Ideas Festival table and pitch counts are not final. Topic counts are based on project titles, descriptions, and keywords.</p></div></footer>
 
 <script>
 (function(){
