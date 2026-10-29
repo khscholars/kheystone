@@ -18,6 +18,12 @@
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
 .y7{display:inline-block;background:rgba(39,153,137,.12);color:#1B6E62;font-weight:600;font-size:14px;line-height:1;padding:6px 10px;border-radius:999px;white-space:nowrap}
 .y7 span{font-weight:400}
+header .navwrap{order:3;padding-block:0!important;border-top:1px solid var(--line)}
+nav.tabs{display:flex;gap:24px;flex-wrap:wrap}
+nav.tabs a{color:var(--black);text-decoration:none;padding:10px 0 12px;font-weight:600;font-size:17px;border-bottom:3px solid transparent;margin-bottom:-1px}
+nav.tabs a:hover{color:var(--cardinal)}
+nav.tabs a[aria-current="page"]{color:var(--cardinal);border-bottom-color:var(--cardinal)}
+@media (max-width:760px){nav.tabs{gap:0;justify-content:space-between}nav.tabs a{flex:1 1 auto;text-align:center;font-size:14.5px;padding:12px 2px;white-space:nowrap}}
 </style>
 <style>
 /* Layout: one white page in KHS brand. Wordmark header with Stanford geometric "hill" shapes, a hero stat, then a two-column grid of stat blocks and to-scale bar charts. Single light theme: brand allows black text only on white. */
@@ -123,10 +129,17 @@ footer .wrap{padding-block:18px 28px}
     <path class="hill" style="animation-delay:.35s" d="M560 120 C700 98 820 78 940 88 C1050 97 1130 76 1200 66 L1200 120 Z" fill="#E04F39" fill-opacity=".9"/>
   </svg>
   <div class="wrap">
-    <p class="back"><a href="index.html">KHeystone Project Directory</a></p>
     <p class="mark"><a href="https://kh.stanford.edu" target="_blank" rel="noopener"><span class="su">Stanford</span> <span>Knight-Hennessy Scholars</span></a></p>
     <h1>2026-27 <span class="kp" id="kp">KHeystone Projects</span> by the numbers <span class="sofar">(so far)</span></h1>
     <div class="meta"><span class="y7">Year 7 <span>· since 2020-21</span></span><p class="asof">Updated October 29, 2026, 12:30 pm · Ideas Festival day</p></div>
+  </div>
+<div class="wrap navwrap">
+  <nav class="tabs" aria-label="Contents">
+    <a href="index.html#">By category</a>
+    <a href="index.html#a-z">A to Z</a>
+    <a href="index.html#table-map">Table map</a>
+    <a href="#" aria-current="page">By the numbers</a>
+  </nav>
   </div>
 </header>
 
