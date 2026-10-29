@@ -128,11 +128,27 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
 .legend span{display:inline-flex;gap:8px;align-items:center}
 @media (max-width:560px){body{font-size:16px}main .wrap{padding-block:20px 48px}.jump{gap:0}.jump a,.jump span{min-width:calc(100% / 13);height:36px}.intro{margin-bottom:20px}.lede{font-size:19px}.desc{font-size:17px}.pager{grid-template-columns:1fr}.pager .next{text-align:left}}
 @media (prefers-reduced-motion:no-preference){main{animation:fade .18s ease-out}@keyframes fade{from{opacity:.4}to{opacity:1}}}
-.connect{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:18px 0 22px}
-.connect-btn{display:inline-block;background:var(--cardinal);color:#fff!important;text-decoration:none;font-weight:600;font-size:17px;padding:12px 22px;border-radius:6px}
-.connect-btn:hover,.connect-btn:focus-visible{background:#6f1010}
-.connect span{font-size:15px;color:var(--cool-gray);flex:1 1 220px}
-@media (max-width:560px){.connect-btn{display:block;width:100%;text-align:center}}
+.connect{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:16px 0 22px}
+.connect-btn{display:inline-flex;align-items:center;gap:8px;color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;line-height:1.2;padding:8px 14px 8px 16px;border-radius:999px;
+  background:linear-gradient(90deg,#007C92,#279989,#E04F39,#E98300,#007C92);background-size:300% 100%;animation:cflow 8s linear infinite;text-shadow:0 1px 1px rgba(0,0,0,.25)}
+.connect-btn svg{width:16px;height:16px;flex:none;animation:cnudge 2.4s ease-in-out infinite}
+.connect-btn:hover{filter:brightness(.92)}
+.connect-btn:focus-visible{outline:3px solid #E98300;outline-offset:2px}
+@keyframes cflow{to{background-position:300% 0}}
+@keyframes cnudge{0%,60%,100%{transform:none}70%{transform:translateX(4px)}80%{transform:none}90%{transform:translateX(3px)}}
+@media (prefers-reduced-motion:reduce){.connect-btn,.connect-btn svg{animation:none}}
+.connect span{font-size:14px;color:var(--cool-gray);flex:1 1 200px}
+.gloss{margin-top:32px}
+.gloss h2{font-size:24px;margin:0 0 4px}
+.gloss h3{font-size:17px;margin:18px 0 8px;color:var(--cool-gray)}
+.gtabs{display:flex;gap:8px;margin:12px 0 14px}
+.gtabs button{font:inherit;font-size:15px;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--black);cursor:pointer}
+.gtabs button.on{background:var(--black);color:#fff;border-color:var(--black)}
+.glist{list-style:none;margin:0;padding:0;columns:3 260px;column-gap:28px}
+.glist li{break-inside:avoid;margin:0 0 6px}
+.glist a{display:flex;align-items:baseline;gap:10px;color:var(--black);text-decoration:none;line-height:1.3;padding:3px 0}
+.glist a:hover .tnm{color:var(--cardinal);text-decoration:underline}
+.tno{flex:none;min-width:54px;text-align:center;font-weight:700;font-size:14px;color:#fff;background:var(--cc);border-radius:999px;padding:2px 8px}
 </style>
 </head>
 <body>
@@ -175,6 +191,7 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
   const seen = {};
   P.forEach(p=>{ let s=slugify(p.t); if(seen[s]) s+='-'+(++seen[s]); else seen[s]=1; p.id=s; });
   const BY_ID = Object.fromEntries(P.map(p=>[p.id,p]));
+  const STN = {"Backcurrent Innovation": "DR32", "Beyond Combustion: Methane to Materials": "CR12", "Beyond Degrees: Closing the Racial Wealth Gap Through Higher Education": "DR14", "Beyond the Fields: The Lives Behind Our Food": "CR15", "BioSentinel - Biosafety in the age AI": "DR33", "Cards 4 Kids": "DR34", "Clean Closet: Explorations in Affordable, Non-Toxic, Sustainable Fashion": "CR13", "D.Sole Foundation: Diabetic Footcare for Underserved Communities": "CR3", "Deep Cuts": "DR24", "Despegar Fellows": "DR9", "Dialekt": "CR4", "EconStats.org": "DR16", "epidemiKH": "DR36", "Equal Depths": "CR2", "Every Phase: Supporting Mothers Through Change": "DR37", "Exploring Vaccine Hesitancy in the Perinatal Period": "CR5", "Field of View": "DR1", "First Teachers": "DR10", "Global Neurosurgery Collaborative": "CR6", "GOAL @ Stanford: Gyn/Ob Advocacy Lab": "DR38", "Hardening Critical Infrastructure: Lessons from Ukraine": "DR27", "Ideas That Travel": "DR2", "Improving Birth Outcomes through Multiomic and Vaginal Microbiome Profiling": "DR39", "Infrastructure for Her: Advancing Gender-Responsive Mobility in Monterrey, Mexico": "DR15", "Intelligence KHollective": "DR23", "Intersex Community Health Coalition": "DR40", "KHnowledge & Policy": "DR17", "Know Your Water": "DR18", "Learn to Discern: Building Educational Tools to Teach Digitial Literacy Skills in the Age of AI": "CR16", "Life and Career Design for High School Students": "DR11", "Local AI Lab": "DR26", "MedBridge: Building Physician–Scientists in the Americas": "CR7", "Mentorship in Academia Project": "DR12", "Mind Matters: Empowering Teachers for Youth Mental": "DR13", "Neurodiversity Network": "CR1", "Next Play": "DR31", "Ojos del Mar": "CR8", "Post-Status: Migrant Justice in the Era of Delegalization": "CR10", "Project Shire": "DR28", "Rethinking Digital Life": "DR29", "Science Communication with Art and Music (SCAM)": "DR4", "Secure & Local AI for Legal Aid Nonprofits": "DR19", "SHTEM Summer Program (Science and Humanities)": "CR9", "Stanford Carceral Health Advocacy Initiative": "CR11", "Stanford Housing Equity Project": "CR14", "Surge On!: Capacity Building for Reconstructive Surgery in Subsaharan Africa": "DR41", "The AI Trust Stack": "DR20", "The Campus Survivors Project": "DR7", "The Deservedness Project": "DR5", "The Mitigation Project": "DR21", "The Traumatic Injury Collaborative": "DR35", "Through Their Eyes: Pediatric Photography Project": "DR6", "Tiny Pharma": "DR30", "Varieties of Cyborg Experience": "DR8", "vidyoo.ai | A Democratized Data Collection Platform": "DR25", "Warmth Through Words": "DR3", "Who Gets Space?": "DR22"};
   const sortKey = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const AZ = P.slice().sort((a,b)=>sortKey(a.t).localeCompare(sortKey(b.t)));
   const firstLetter = p => { const c=sortKey(p.t).charAt(0).toUpperCase(); return /[A-Z]/.test(c)?c:'#'; };
@@ -244,6 +261,7 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
     const rows=[];
     if(p.p) rows.push(['Project manager', person({...p.p, u:p.u})]);
     if(p.f&&p.f.length) rows.push([p.f.length>1?'Founders':'Founder', p.f.map(f=>person(p.p&&f.n===p.p.n?{...f,u:p.u}:f)).join('')]);
+    if(STN[p.t]) rows.push(['Ideas Festival table', `<a href="#table-map">${esc(STN[p.t])}</a><span class="yr">${STN[p.t].startsWith('DR')?'Dining Room':'Classroom'}</span>`]);
     if(p.e) rows.push(['Established', esc(p.e)]);
     return rows.length?`<dl class="facts">${rows.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>`:'';
   }
@@ -254,7 +272,7 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
         <a class="chip" href="#"><span class="dot" aria-hidden="true"></span>${esc(p.c)}</a>
         <h2>${esc(p.t)}</h2>
         ${p.s?`<p class="lede">${esc(p.s)}</p>`:''}
-        <p class="connect"><a class="connect-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdd0upfXTFJkC5SKX7fuA5PVN0JAlwXkIegBchWx8dLi4Je-A/viewform?usp=pp_url&entry.173286245=${encodeURIComponent(p.t)}" target="_blank" rel="noopener">Connect with this project</a><span>Interested in mentoring or joining? Share your contact info with the project team.</span></p>
+        <p class="connect"><a class="connect-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdd0upfXTFJkC5SKX7fuA5PVN0JAlwXkIegBchWx8dLi4Je-A/viewform?usp=pp_url&entry.173286245=${encodeURIComponent(p.t)}" target="_blank" rel="noopener">Connect with this project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></a><span>Mentor, join, or partner with the team.</span></p>
         ${facts(p)}
         ${p.d?`<p class="label">About the project</p><div class="desc">${paras(p.d)}</div>`:''}
         ${p.n?`<p class="label">Skills the team is looking for</p><div class="desc">${paras(p.n)}</div>`:''}
@@ -262,13 +280,31 @@ article h2{font-family:var(--sans);font-weight:600;font-size:clamp(30px,4.4vw,42
       </article>
       <nav class="pager" aria-label="More projects">${prev?`<a href="#${prev.id}"><small>Previous</small><span>${esc(prev.t)}</span></a>`:'<span></span>'}${next?`<a class="next" href="#${next.id}"><small>Next</small><span>${esc(next.t)}</span></a>`:''}</nav>`;
   }
+
+  function glossary(){
+    const items=AZ.filter(p=>STN[p.t]);
+    const num=s=>(s.startsWith('DR')?0:1000)+parseInt(s.slice(2));
+    const li=p=>`<li><a href="#${p.id}"><span class="tno" style="--cc:${cc(p.c)}">${esc(STN[p.t])}</span><span class="tnm">${esc(p.t)}</span></a></li>`;
+    const byRoom=(pre)=>items.filter(p=>STN[p.t].startsWith(pre)).sort((a,b)=>num(STN[a.t])-num(STN[b.t]));
+    return `<section class="gloss"><h2>Find a table</h2><p class="note">${items.length} project tables. Select a project to open its page.</p>
+      <div class="gtabs" role="tablist"><button type="button" class="on" data-g="az">A to Z</button><button type="button" data-g="num">By table number</button></div>
+      <div data-gv="az"><ul class="glist">${items.map(li).join('')}</ul></div>
+      <div data-gv="num" hidden><h3>Dining Room</h3><ul class="glist">${byRoom('DR').map(li).join('')}</ul><h3>Classroom</h3><ul class="glist">${byRoom('CR').map(li).join('')}</ul></div></section>`;
+  }
+  function wireGloss(){
+    document.querySelectorAll('.gtabs button').forEach(b=>b.addEventListener('click',()=>{
+      document.querySelectorAll('.gtabs button').forEach(x=>x.classList.toggle('on',x===b));
+      document.querySelectorAll('[data-gv]').forEach(v=>v.hidden=v.dataset.gv!==b.dataset.g);
+    }));
+  }
   function renderMap(){
     // Standalone version: the map is the file "table-map.png" in the same folder as this page.
     // To update it, replace that file. If it's missing, the page shows "coming soon".
     const legend = `<div class="legend">${CAT_ORDER.map(c=>`<span><i class="dot" style="--cc:${cc(c)}"></i>${esc(c)}</span>`).join('')}</div>`;
-    view.innerHTML = `<div class="mapbox"><img src="table-map.png" alt="Table map for the KHeystone Ideas Festival at Denning House, showing project tables by category" id="mapimg">${legend}</div>`;
+    view.innerHTML = `<div class="mapbox"><img src="table-map.png" alt="Table map for the KHeystone Ideas Festival at Denning House, showing project tables by category" id="mapimg">${legend}</div>${glossary()}`;
+    wireGloss();
     const img=document.getElementById('mapimg');
-    img.addEventListener('error',()=>{ view.innerHTML=`<div class="empty"><strong>Table map coming soon</strong>The map of project tables will be posted here before the Ideas Festival.</div>`; });
+    img.addEventListener('error',()=>{ document.querySelector('.mapbox').outerHTML=`<div class="empty"><strong>Table map coming soon</strong>The map of project tables will be posted here before the Ideas Festival.</div>`; });
   }
   function route(){
     const h = decodeURIComponent(location.hash.replace(/^#/,''));
